@@ -1,69 +1,74 @@
-import Image from "next/image";
+import { getHomePageData } from "@/lib/queries";
+import Hero from "@/components/home/Hero";
+import StatsStrip from "@/components/home/StatsStrip";
+import ChairmanMessage from "@/components/home/ChairmanMessage";
+import MarqueeTicker from "@/components/home/MarqueeTicker";
+import ZedemProjectsTicker from "@/components/home/ZedemProjectsTicker";
+import Overview from "@/components/home/Overview";
+import LocationSection from "@/components/home/LocationSection";
+import MasterPlanMap from "@/components/home/MasterPlanMap";
+import BlocksSectors from "@/components/home/BlocksSectors";
+import PlotsDirectory from "@/components/home/PlotsDirectory";
+import Flagships from "@/components/home/Flagships";
+import PaymentPlan from "@/components/home/PaymentPlan";
+import BookingSteps from "@/components/home/BookingSteps";
+import InvestmentBenefits from "@/components/home/InvestmentBenefits";
+import Amenities from "@/components/home/Amenities";
+import Testimonials from "@/components/home/Testimonials";
+import PhotoGallery from "@/components/home/PhotoGallery";
+import FaisaltownStats from "@/components/home/FaisaltownStats";
+import LatestArticles from "@/components/home/LatestArticles";
+import FAQAccordion from "@/components/ui/FAQAccordion";
+import BottomCTA from "@/components/home/BottomCTA";
+import SectionHeading from "@/components/ui/SectionHeading";
+import Html from "@/components/ui/Html";
 
-export default function Home() {
+export default async function HomePage() {
+  const data = await getHomePageData();
+  const { siteOptions } = data;
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <Hero siteOptions={siteOptions} />
+      <StatsStrip stats={data.stats.nodes} />
+      <ChairmanMessage siteOptions={siteOptions} />
+      <MarqueeTicker />
+      <ZedemProjectsTicker projects={data.zedemProjects.nodes} />
+      <Overview siteOptions={siteOptions} />
+      <LocationSection siteOptions={siteOptions} landmarks={data.landmarks.nodes} />
+      <MasterPlanMap siteOptions={siteOptions} />
+      <BlocksSectors blocks={data.blocks.nodes} />
+      <PlotsDirectory plots={data.plots.nodes} />
+      <Flagships flagships={data.flagships.nodes} />
+      <PaymentPlan siteOptions={siteOptions} />
+      <BookingSteps steps={data.bookingSteps.nodes} siteOptions={siteOptions} />
+      <InvestmentBenefits benefits={data.benefits.nodes} siteOptions={siteOptions} />
+      <Amenities amenities={data.amenities.nodes} siteOptions={siteOptions} />
+      <Testimonials testimonials={data.testimonials.nodes} />
+
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl text-center">
+          <SectionHeading title="On-Site Construction & Photo Gallery" center />
+          <Html html={siteOptions.galleryIntro} className="prose prose-neutral mx-auto mt-4 max-w-none text-ink/75" />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="mt-10">
+          <PhotoGallery items={data.galleryItems.nodes} />
         </div>
-      </main>
-    </div>
+      </section>
+
+      <FaisaltownStats stats={data.faisaltownStats.nodes} />
+      <LatestArticles posts={data.posts.nodes} />
+
+      <section className="bg-cream py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeading eyebrow="FAQ's" title="Frequently Asked Questions" center />
+          <div className="mt-10">
+            <FAQAccordion faqs={data.faqs.nodes} />
+          </div>
+        </div>
+      </section>
+
+      <BottomCTA siteOptions={siteOptions} />
+    </>
   );
 }
