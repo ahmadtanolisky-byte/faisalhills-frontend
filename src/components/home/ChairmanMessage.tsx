@@ -10,7 +10,17 @@ export default function ChairmanMessage({ siteOptions }: { siteOptions: SiteOpti
           {siteOptions.chairmanTitle || "Chairman & Founder"} — {siteOptions.chairmanName}
         </h2>
         <Html html={siteOptions.chairmanBio} className="prose prose-neutral mt-4 max-w-none text-ink/80" />
+         <div className="mt-6 space-y-4 text-base leading-7 text-ink/80">
+          <p>
+            Faisal Town Group built Faisal Hills, and the company sits under
+            Chaudhry Abdul Majeed, chairman of Faisal Town Group. His earlier
+            projects, Faisal Town Phase 1, Faisal Town Phase 2, and Faisal
+            Margalla City, all followed the same order: approval first,
+            construction second. Faisal Hills is being built the same way.
+          </p>
+        </div>
         <a href="#overview" className="mt-4 inline-block text-sm font-semibold text-maroon underline underline-offset-4">
+
           Discover More About Zedem International →
         </a>
       </div>

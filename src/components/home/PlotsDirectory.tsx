@@ -9,8 +9,7 @@ export default function PlotsDirectory({ plots }: { plots: Plot[] }) {
     <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
       <SectionHeading eyebrow="Verified Legal Inventory & Resale Files" title="Plots for Sale in Faisal Hills" center />
       <p className="mx-auto mt-4 max-w-2xl text-center text-ink/70">
-        Explore authentic available residential &amp; commercial plots across all sectors — real-time market
-        valuations, dimensions, facing views, and direct sales desk contact.
+       Every plot below is checked with current market prices. So, the prices shown are the latest available. The plot size, block, facing, and price are clearly mentioned. You can also contact the sales office directly from each listing.
       </p>
 
       <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

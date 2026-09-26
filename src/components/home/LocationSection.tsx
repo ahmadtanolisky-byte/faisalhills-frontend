@@ -15,6 +15,9 @@ export default function LocationSection({
         <div className="mx-auto max-w-3xl text-center">
           <SectionHeading title={siteOptions.locationTitle || "A Location That Sets It Apart"} center />
           <Html html={siteOptions.locationText} className="prose prose-neutral mx-auto mt-5 max-w-none text-ink/75" />
+          <p className="mt-4 text-base leading-7 text-ink/80">
+  Faisal Hills is on GT Road (N-5) near Taxila, in Zone 2 of Islamabad. It is close to the M-1 Motorway, so Islamabad and Rawalpindi are easy to reach. The Margalla Hills are behind the society, and some plots in Block B have a clear hill view. Faisal Hills is also close to B-17, Taxila, and HITEC University.
+</p>
         </div>
 
         {landmarks.length ? (

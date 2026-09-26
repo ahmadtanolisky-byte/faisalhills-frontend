@@ -11,8 +11,7 @@ export default function Flagships({ flagships }: { flagships: Flagship[] }) {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading title="Faisal Hills High-Rise & Commercial Flagships" center />
         <p className="mx-auto mt-4 max-w-2xl text-center text-ink/70">
-          Discover world-class architectural marvels and premium lifestyle shopping destinations developed within
-          Faisal Hills.
+          A 26-storey twin-tower project inside Executive Block. One tower runs as a hotel, the other holds 1, 2, and 3 bedroom apartments alongside commercial shops. It's the tallest structure in the society by a clear margin.
         </p>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
@@ -29,8 +28,10 @@ export default function Flagships({ flagships }: { flagships: Flagship[] }) {
                 ) : null}
               </div>
               <div className="p-6">
-                <p className="font-display text-xl font-bold text-navy">{flagship.title}</p>
-                <Html html={flagship.content} className="prose prose-neutral mt-2 max-w-none text-sm text-ink/70" />
+                <p className="mx-auto mt-4 max-w-2xl text-center text-ink/70">
+        An open-air commercial street built along the lines of Istanbul's Istiklal Street, cafes, shops, and restaurants lined along a pedestrian boulevard near the main entrance.
+        </p>
+                {/* <Html html={flagship.content} className="prose prose-neutral mt-2 max-w-none text-sm text-ink/70" /> */}
                 <a
                   href={flagship.link || "#"}
                   className="mt-4 inline-block text-sm font-semibold text-maroon underline underline-offset-4"
