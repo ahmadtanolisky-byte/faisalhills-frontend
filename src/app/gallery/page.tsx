@@ -6,10 +6,13 @@ import PhotoGallery from "@/components/home/PhotoGallery";
 
 export const metadata: Metadata = {
   title: "Photo Gallery | Faisal Hills Islamabad",
+  description:
+    "Photos of Faisal Hills Islamabad: main entrance, boulevard, Grand Jamia Mosque, parks, Hill Walk, aerial master plan and Faisal Jewel.",
 };
 
 export default async function GalleryPage() {
-  const items = await getGalleryItems();
+  // Fall back to the bundled site photos if WordPress is unreachable.
+  const items = await getGalleryItems().catch(() => []);
 
   return (
     <>
@@ -17,13 +20,13 @@ export default async function GalleryPage() {
         image="/images/hero-gallery.png"
         eyebrow="Photo Gallery"
         title="On-Site Construction & Photo Gallery"
-        subtitle="Real-time photography of Faisal Hills entrance portals, boulevards, mosque and construction."
+        subtitle="Photos and renders of the Faisal Hills entrance, boulevards, mosque, parks and flagship projects."
       />
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <SectionHeading title="On-Site Construction & Photo Gallery" center />
         <p className="mx-auto mt-4 max-w-2xl text-center text-ink/70">
-          Real-time photography of Faisal Hills entrance portals, wide boulevards, Grand Jamia Mosque, and Faisal
-          Jewels skyscraper construction.
+          See Faisal Hills on the ground and from above: the main entrance, the 225-ft boulevard, the Grand Jamia
+          Mosque, parks and the Hill Walk, alongside the aerial master plan and renders of the Faisal Jewel towers.
         </p>
         <div className="mt-10">
           <PhotoGallery items={items} />

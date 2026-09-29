@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
 import type { SiteOptions } from "@/lib/types";
 
@@ -10,49 +11,49 @@ export default function MasterPlanMap({
   return (
     <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-3xl text-center">
-        <SectionHeading title="Faisal Hills Master Plan Map" center />
+        <SectionHeading title="Faisal Hills Master Plan" center />
 
         <p className="mt-4 text-ink/70">
-          Explore the officially approved layout of Faisal Hills. Inspect plot
-          dimensions, road networks, sector avenues, and central commercial
-          boulevards.
+          Spread over roughly 11,823.5 kanals between the M-1 Motorway and GT
+          Road, Faisal Hills is planned around a 225-ft main boulevard, wide
+          sector roads, parks, mosques and dedicated commercial zones.
         </p>
 
         <p className="mt-5 text-ink/70">
-          This is the approved map of the society. It shows all the blocks,
-          main road, other roads, parks, mosques, and commercial areas. Check
-          the map before choosing a plot, and always confirm that you have the
-          latest version from our sales office.
+          The community is divided into Executive Block, Blocks A, B, B
+          Extension, C and D. Before choosing a plot, ask our sales office for
+          the latest approved layout of the block you are interested in.
         </p>
       </div>
 
-      <div className="relative mx-auto mt-10 aspect-video max-w-4xl overflow-hidden rounded-2xl border border-black/10 bg-cream">
-        {siteOptions.masterPlanImage ? (
-          <Image
-            src={siteOptions.masterPlanImage}
-            alt="Faisal Hills Master Plan"
-            fill
-            className="object-cover"
-          />
-        ) : (
-          <div className="flex h-full w-full items-center justify-center text-sm text-ink/40">
-            Master plan map — upload in wp-admin Site Options
-          </div>
-        )}
+      <div className="relative mx-auto mt-10 aspect-[1585/640] max-w-5xl overflow-hidden rounded-2xl border border-black/10 bg-navy">
+        <Image
+          src={siteOptions.masterPlanImage || "/images/hero-masterplan.png"}
+          alt="Aerial view of the Faisal Hills Islamabad master plan"
+          fill
+          sizes="(min-width: 1024px) 64rem, 100vw"
+          className="object-cover"
+        />
       </div>
 
-      {siteOptions.masterPlanPdfUrl ? (
-        <div className="mt-6 text-center">
+      <div className="mt-6 flex flex-wrap justify-center gap-3">
+        <Link
+          href="/master-plan"
+          className="inline-block rounded-full bg-maroon px-6 py-3 text-sm font-semibold text-white transition hover:bg-maroon-dark"
+        >
+          Explore the Master Plan
+        </Link>
+        {siteOptions.masterPlanPdfUrl ? (
           <a
             href={siteOptions.masterPlanPdfUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block rounded-full bg-maroon px-6 py-3 text-sm font-semibold text-white transition hover:bg-maroon-dark"
+            className="inline-block rounded-full border border-maroon px-6 py-3 text-sm font-semibold text-maroon transition hover:bg-maroon hover:text-white"
           >
             Download Master Plan (PDF)
           </a>
-        </div>
-      ) : null}
+        ) : null}
+      </div>
     </section>
   );
 }

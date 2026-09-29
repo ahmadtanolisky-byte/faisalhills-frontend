@@ -1,8 +1,5 @@
   import type { Metadata } from "next";
   import Image from "next/image";
-  import { getBlocks, getSiteOptions } from "@/lib/queries";
-  import MasterPlanMap from "@/components/home/MasterPlanMap";
-  import BlocksSectors from "@/components/home/BlocksSectors";
 
 import Link from "next/link";
 
@@ -51,7 +48,7 @@ const blocks = [
   },
 ];
 
-const landmarks = [
+const landmarks: { number: string; title: string; text: string; image?: string }[] = [
   {
     number: "01",
     title: "Arc Monument",
@@ -65,6 +62,7 @@ const landmarks = [
   {
     number: "03",
     title: "Faisal Jewel",
+    image: "/images/flagship-faisal-jewel-1.png",
     text: "The Faisal Jewel is one of the most prominent landmarks, proposed to enhance the prestige of Faisal Hills. Its striking presence has made it a part of Faisal Hills' contemporary identity.",
   },
   {
@@ -75,6 +73,7 @@ const landmarks = [
   {
     number: "05",
     title: "Glow Garden",
+    image: "/images/gallery-park.png",
     text: "Glow Garden is an appealing landmark created specifically to foster a lively environment in Faisal Hills. The illuminated surroundings provide residents and tourists alike with an inviting place for leisurely walks, rest, and family time.",
   },
   {
@@ -254,6 +253,23 @@ export default function MasterPlanPage() {
             </p>
           </div>
 
+          <figure className="fh-master-aerial">
+            <Image
+              src="/images/hero-masterplan.png"
+              alt="Aerial night view of the Faisal Hills master plan with the Margalla Hills behind"
+              fill
+              sizes="(min-width: 1180px) 1180px, 100vw"
+            />
+            <figcaption>
+              <span>AERIAL VIEW</span>
+              Faisal Hills at dusk, with the Margalla Hills to the north.
+            </figcaption>
+          </figure>
+
+          <p className="fh-master-schematic-label">
+            SCHEMATIC · BLOCK LAYOUT (NOT TO SCALE)
+          </p>
+
           <div className="fh-master-plan-visual">
 
             <div className="fh-master-road master-road-1">
@@ -389,13 +405,27 @@ export default function MasterPlanPage() {
                 className="fh-master-landmark-card"
                 key={landmark.title}
               >
-                <div className="fh-master-landmark-number">
-                  {landmark.number}
-                </div>
+                {landmark.image ? (
+                  <div className="fh-master-landmark-image">
+                    <Image
+                      src={landmark.image}
+                      alt={landmark.title}
+                      fill
+                      sizes="(min-width: 900px) 380px, (min-width: 520px) 50vw, 100vw"
+                    />
+                    <span>{landmark.number}</span>
+                  </div>
+                ) : (
+                  <>
+                    <div className="fh-master-landmark-number">
+                      {landmark.number}
+                    </div>
 
-                <div className="fh-master-landmark-icon">
-                  +
-                </div>
+                    <div className="fh-master-landmark-icon">
+                      +
+                    </div>
+                  </>
+                )}
 
                 <h3>{landmark.title}</h3>
 
@@ -904,6 +934,47 @@ export default function MasterPlanPage() {
   background-size: 45px 45px;
 }
 
+.fh-master-aerial {
+  position: relative;
+  aspect-ratio: 1585 / 640;
+  margin: 0 0 40px;
+  overflow: hidden;
+  background: var(--fh-navy);
+  border: 1px solid #DCD2C5;
+}
+
+.fh-master-aerial img {
+  object-fit: cover;
+}
+
+.fh-master-aerial figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 50px 24px 20px;
+  color: #E6E0D7;
+  font-size: 13px;
+  background: linear-gradient(to top, rgba(8,18,30,.85), transparent);
+}
+
+.fh-master-aerial figcaption span {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--fh-orange);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .18em;
+}
+
+.fh-master-schematic-label {
+  color: var(--fh-burgundy);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  margin-bottom: 14px;
+}
+
 /* Roads */
 
 .fh-master-road {
@@ -1211,6 +1282,33 @@ export default function MasterPlanPage() {
   font-size: 20px;
 }
 
+.fh-master-landmark-image {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  margin: -27px -27px 25px;
+  overflow: hidden;
+  background: var(--fh-navy);
+}
+
+.fh-master-landmark-image img {
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+
+.fh-master-landmark-card:hover .fh-master-landmark-image img {
+  transform: scale(1.05);
+}
+
+.fh-master-landmark-image span {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 4px 8px;
+  color: var(--fh-orange);
+  background: rgba(14,27,42,.8);
+  font-size: 10px;
+}
+
 .fh-master-landmark-card h3 {
   color: var(--fh-navy);
   font-size: 23px;
@@ -1437,6 +1535,15 @@ export default function MasterPlanPage() {
 
   .fh-master-plan-visual {
     height: 400px;
+  }
+
+  .fh-master-aerial {
+    aspect-ratio: 4 / 3;
+  }
+
+  .fh-master-aerial figcaption {
+    padding: 40px 16px 14px;
+    font-size: 12px;
   }
 
   .fh-master-zone {

@@ -18,6 +18,12 @@ const nextConfig: NextConfig = {
         pathname: "/**",
       },
       {
+        // Current WordPress backend (WORDPRESS_GRAPHQL_URL).
+        protocol: "https",
+        hostname: "crm.salescda.com",
+        pathname: "/wp-content/uploads/**",
+      },
+      {
         // Production WordPress backend (adjust if your subdomain differs).
         protocol: "https",
         hostname: "cms.faisalhillsislamabadfh.com",
