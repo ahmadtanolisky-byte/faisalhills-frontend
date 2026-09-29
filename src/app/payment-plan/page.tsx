@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getBookingSteps, getSiteOptions } from "@/lib/queries";
 import PaymentPlan from "@/components/home/PaymentPlan";
 import BookingSteps from "@/components/home/BookingSteps";
@@ -137,6 +138,7 @@ export default function PaymentPlanPage() {
 
       {/* HERO */}
       <section className="fh-payment-hero">
+        <Image src="/images/hero-payment-plan.png" alt="Faisal Hills Prices & Payment Plan" fill priority className="fh-payment-hero-image" />
         <div className="fh-payment-hero-overlay" />
 
         <div className="fh-payment-container fh-payment-hero-content">
@@ -590,6 +592,14 @@ export default function PaymentPlanPage() {
       #0E1B2A 48%,
       #1B3148 100%
     );
+}
+
+.fh-payment-hero-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  object-fit: cover;
+  opacity: 0.5;
 }
 
 .fh-payment-hero::before {

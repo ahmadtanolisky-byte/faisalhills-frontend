@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getSiteOptions } from "@/lib/queries";
 import ChairmanMessage from "@/components/home/ChairmanMessage";
 import Overview from "@/components/home/Overview";
@@ -61,6 +62,7 @@ export default function AboutPage() {
     <main className="fh-about-page">
       {/* Hero */}
       <section className="fh-about-hero">
+        <Image src="/images/hero-about.png" alt="Faisal Hills Islamabad" fill priority className="fh-about-hero-image" />
         <div className="fh-about-hero-overlay" />
 
         <div className="fh-about-container fh-about-hero-content">
@@ -136,8 +138,12 @@ export default function AboutPage() {
         <div className="fh-about-container fh-chairman-grid">
           <div className="fh-chairman-visual">
             <div className="fh-chairman-image-placeholder">
-              <span>CHAIRMAN &amp; FOUNDER</span>
-              <strong>CAM</strong>
+              <Image
+                src="/images/chairman-founder.png"
+                alt="Chaudhry Abdul Majeed — Chairman & Founder"
+                fill
+                className="fh-chairman-photo"
+              />
             </div>
 
             <div className="fh-founder-label">
@@ -652,6 +658,14 @@ export default function AboutPage() {
       );
   }
 
+  .fh-about-hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    object-fit: cover;
+    opacity: 0.55;
+  }
+
   .fh-about-hero::before {
     content: "";
     position: absolute;
@@ -930,23 +944,11 @@ export default function AboutPage() {
     background-size: 90px 90px;
   }
 
-  .fh-chairman-image-placeholder span,
-  .fh-chairman-image-placeholder strong {
-    position: relative;
-    z-index: 1;
-  }
-
-  .fh-chairman-image-placeholder span {
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    color: #d0aeb6;
-  }
-
-  .fh-chairman-image-placeholder strong {
-    font-size: 100px;
-    color: rgba(255, 255, 255, 0.9);
-    font-weight: 500;
-    letter-spacing: -0.1em;
+  .fh-chairman-photo {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    object-fit: cover;
   }
 
   .fh-founder-label {

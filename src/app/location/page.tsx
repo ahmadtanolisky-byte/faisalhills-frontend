@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { getLandmarks, getSiteOptions } from "@/lib/queries";
 import LocationSection from "@/components/home/LocationSection";
 
@@ -58,6 +59,7 @@ export default function LocationPage() {
     <main className="fh-location-page">
       {/* HERO */}
       <section className="fh-location-hero">
+        <Image src="/images/hero-location.png" alt="Faisal Hills Islamabad Location" fill priority className="fh-location-hero-image" />
         <div className="fh-location-hero-overlay" />
 
         <div className="fh-location-container fh-location-hero-content">
@@ -504,6 +506,14 @@ export default function LocationPage() {
       var(--fh-navy) 45%,
       var(--fh-navy-2) 100%
     );
+}
+
+.fh-location-hero-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  object-fit: cover;
+  opacity: 0.55;
 }
 
 .fh-location-hero::before {

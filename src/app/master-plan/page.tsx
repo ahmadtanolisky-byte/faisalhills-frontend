@@ -1,4 +1,5 @@
   import type { Metadata } from "next";
+  import Image from "next/image";
   import { getBlocks, getSiteOptions } from "@/lib/queries";
   import MasterPlanMap from "@/components/home/MasterPlanMap";
   import BlocksSectors from "@/components/home/BlocksSectors";
@@ -127,6 +128,7 @@ export default function MasterPlanPage() {
 
       {/* HERO */}
       <section className="fh-master-hero">
+        <Image src="/images/hero-masterplan.png" alt="Faisal Hills Islamabad Master Plan" fill priority className="fh-master-hero-image" />
         <div className="fh-master-hero-overlay" />
 
         <div className="fh-master-container fh-master-hero-content">
@@ -627,6 +629,14 @@ export default function MasterPlanPage() {
       #0E1B2A 48%,
       #1B3148 100%
     );
+}
+
+.fh-master-hero-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  object-fit: cover;
+  opacity: 0.5;
 }
 
 .fh-master-hero::before {

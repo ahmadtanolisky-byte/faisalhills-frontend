@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getFaqs } from "@/lib/queries";
 import SectionHeading from "@/components/ui/SectionHeading";
+import PageHero from "@/components/ui/PageHero";
 import FAQAccordion from "@/components/ui/FAQAccordion";
 
 export const metadata: Metadata = {
@@ -11,11 +12,19 @@ export default async function FaqsPage() {
   const faqs = await getFaqs();
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-      <SectionHeading eyebrow="FAQ's" title="Frequently Asked Questions" center />
-      <div className="mt-10">
-        <FAQAccordion faqs={faqs} />
+    <>
+      <PageHero
+        image="/images/hero-faqs.png"
+        eyebrow="FAQ's"
+        title="Frequently Asked Questions"
+        subtitle="Answers to common questions about plots, payments and booking at Faisal Hills."
+      />
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <SectionHeading eyebrow="FAQ's" title="Frequently Asked Questions" center />
+        <div className="mt-10">
+          <FAQAccordion faqs={faqs} />
+        </div>
       </div>
-    </div>
+    </>
   );
 }

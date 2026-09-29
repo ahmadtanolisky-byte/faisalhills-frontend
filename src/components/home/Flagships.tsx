@@ -3,6 +3,11 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import Html from "@/components/ui/Html";
 import type { Flagship } from "@/lib/types";
 
+const fallbackFlagshipImages = [
+  "/images/flagship-faisal-jewel-1.png",
+  "/images/flagship-faisal-jewel-2.png",
+];
+
 export default function Flagships({ flagships }: { flagships: Flagship[] }) {
   if (!flagships.length) return null;
 
@@ -15,17 +20,18 @@ export default function Flagships({ flagships }: { flagships: Flagship[] }) {
         </p>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
-          {flagships.map((flagship) => (
+          {flagships.map((flagship, index) => (
             <div key={flagship.slug} className="overflow-hidden rounded-2xl bg-white shadow-sm">
               <div className="relative aspect-video bg-navy">
-                {flagship.featuredImage?.node.sourceUrl ? (
-                  <Image
-                    src={flagship.featuredImage.node.sourceUrl}
-                    alt={flagship.featuredImage.node.altText || flagship.title}
-                    fill
-                    className="object-cover"
-                  />
-                ) : null}
+                <Image
+                  src={
+                    flagship.featuredImage?.node.sourceUrl ||
+                    fallbackFlagshipImages[index % fallbackFlagshipImages.length]
+                  }
+                  alt={flagship.featuredImage?.node.altText || flagship.title}
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="p-6">
                 <p className="mx-auto mt-4 max-w-2xl text-center text-ink/70">

@@ -4,21 +4,29 @@ import Image from "next/image";
 import { useMemo, useState } from "react";
 import type { GalleryItem } from "@/lib/types";
 
+const fallbackGalleryItems: GalleryItem[] = [
+  { title: "Main Entrance", content: "", featuredImage: { node: { sourceUrl: "/images/gallery-main-entrance.png", altText: "Main Entrance" } } },
+  { title: "Grand Jamia Mosque", content: "", featuredImage: { node: { sourceUrl: "/images/gallery-mosque.png", altText: "Grand Jamia Mosque" } } },
+  { title: "Park", content: "", featuredImage: { node: { sourceUrl: "/images/gallery-park.png", altText: "Park" } } },
+  { title: "Boulevard", content: "", featuredImage: { node: { sourceUrl: "/images/gallery-boulevard.png", altText: "Boulevard" } } },
+  { title: "Faisal Jewel", content: "", featuredImage: { node: { sourceUrl: "/images/gallery-faisal-jewel.png", altText: "Faisal Jewel" } } },
+  { title: "Hill Walk", content: "", featuredImage: { node: { sourceUrl: "/images/gallery-hillwalk.png", altText: "Hill Walk" } } },
+];
+
 export default function PhotoGallery({ items }: { items: GalleryItem[] }) {
+  const items_ = items.length ? items : fallbackGalleryItems;
   const categories = useMemo(() => {
     const set = new Set<string>();
-    items.forEach((item) => item.galleryCategories?.nodes.forEach((c) => set.add(c.name)));
+    items_.forEach((item) => item.galleryCategories?.nodes.forEach((c) => set.add(c.name)));
     return ["All", ...Array.from(set)];
-  }, [items]);
+  }, [items_]);
 
   const [active, setActive] = useState("All");
 
   const filtered =
     active === "All"
-      ? items
-      : items.filter((item) => item.galleryCategories?.nodes.some((c) => c.name === active));
-
-  if (!items.length) return null;
+      ? items_
+      : items_.filter((item) => item.galleryCategories?.nodes.some((c) => c.name === active));
 
   return (
     <div>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getSiteOptions } from "@/lib/queries";
 import SectionHeading from "@/components/ui/SectionHeading";
+import PageHero from "@/components/ui/PageHero";
 import BookingForm from "@/components/home/BookingForm";
 
 export const metadata: Metadata = {
@@ -11,7 +12,14 @@ export default async function ContactPage() {
   const siteOptions = await getSiteOptions();
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <>
+      <PageHero
+        image="/images/hero-contact.png"
+        eyebrow="Get In Touch"
+        title="Contact Faisal Hills Islamabad"
+        subtitle="Reach our authorized sales desk for plot availability, pricing and site visits."
+      />
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
       <SectionHeading eyebrow="Get In Touch" title="Ready to Secure Your Plot in Faisal Hills?" center />
       <p className="mx-auto mt-4 max-w-2xl text-center text-ink/70">
         Connect directly with our authorized sales desk to choose your desired sector, inspect plot availability, or
@@ -59,6 +67,7 @@ export default async function ContactPage() {
 
         <BookingForm />
       </div>
-    </div>
+      </div>
+    </>
   );
 }

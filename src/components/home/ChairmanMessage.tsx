@@ -26,11 +26,12 @@ export default function ChairmanMessage({ siteOptions }: { siteOptions: SiteOpti
       </div>
 
       <div className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl bg-cream">
-        {siteOptions.chairmanPhoto ? (
-          <Image src={siteOptions.chairmanPhoto} alt={siteOptions.chairmanName} fill className="object-cover" />
-        ) : (
-          <div className="flex h-full w-full items-center justify-center text-sm text-ink/40">Chairman photo</div>
-        )}
+        <Image
+          src={siteOptions.chairmanPhoto || "/images/chairman-founder.png"}
+          alt={siteOptions.chairmanName || "Chairman & Founder"}
+          fill
+          className="object-cover"
+        />
       </div>
     </section>
   );
