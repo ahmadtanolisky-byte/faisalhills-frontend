@@ -143,7 +143,7 @@ export default function MasterPlanPage() {
 
           <p className="fh-master-hero-text">
             Explore the planning, blocks, landmarks, facilities and amenities
-            that shape Faisal Hills into a modern residential community.
+            that shape <a href="https://faisalhillislamabad.com.pk/">Faisal Hills</a> into a modern residential community.
           </p>
 
           <div className="fh-master-actions">
@@ -164,7 +164,7 @@ export default function MasterPlanPage() {
         </div>
 
         <div className="fh-master-hero-bottom">
-          <span>11,823.5 KANALS</span>
+          <span>11,823.5 <a href="https://en.wikipedia.org/wiki/Kanal_(unit)">KANALS</a></span>
           <span>GT ROAD · M-1 MOTORWAY</span>
         </div>
       </section>
@@ -187,9 +187,9 @@ export default function MasterPlanPage() {
 
           <div className="fh-master-copy">
             <p>
-              Faisal Hills is a housing society located in the
-              Rawalpindi-Islamabad area, known for its planning and modern
-              development. The housing society was developed with the help of
+              Faisal Hills is a housing society <a href="https://faisalhillislamabad.com.pk/location">located in the
+              Rawalpindi-Islamabad area</a>, known for its planning and <a href="https://faisalhillislamabad.com.pk/about">modern
+              development.</a> The housing society was developed with the help of
               planners, designers, and architects.
             </p>
 
@@ -382,7 +382,7 @@ export default function MasterPlanPage() {
           <div className="fh-master-section-heading">
             <div>
               <p className="fh-master-eyebrow fh-master-dark-eyebrow">
-                ATTRACTIONS & LANDMARKS
+                ATTRACTIONS & <a href="https://en.wikipedia.org/wiki/Marla_(unit)">LANDMARKS</a>
               </p>
 
               <h2>
@@ -506,20 +506,20 @@ export default function MasterPlanPage() {
           <div className="fh-master-copy">
             <p>
               The Faisal Hills master plan brings together residential and
-              commercial plots with infrastructure, recreational areas,
+              commercial <a href="https://faisalhillislamabad.com.pk/plots">plots </a>with infrastructure, recreational areas,
               religious facilities, healthcare and green spaces.
             </p>
 
             <p>
               Wide roads and major access routes connect the different parts
-              of the community, while landmarks and recreational facilities
-              add character to the development.
+              of the community, while landmarks and recreational <a href="https://faisalhillislamabad.com.pk/blog">facilities
+              add character to the development.</a>
             </p>
 
             <p>
               The result is a planned environment that combines residential
               living, commercial activity and community facilities within a
-              connected development.
+              connected <a href="https://faisalhillislamabad.com.pk/gallery">development.</a>
             </p>
           </div>
 

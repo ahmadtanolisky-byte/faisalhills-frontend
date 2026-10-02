@@ -15,7 +15,7 @@ export default function MasterPlanMap({
 
         <p className="mt-4 text-ink/70">
           Spread over roughly 11,823.5 kanals between the M-1 Motorway and GT
-          Road, Faisal Hills is planned around a 225-ft main boulevard, wide
+          Road, Faisal Hills is <a href="https://faisalhillislamabad.com.pk/master-plan">planned </a>around a 225-ft main boulevard, wide
           sector roads, parks, mosques and dedicated commercial zones.
         </p>
 

@@ -156,7 +156,7 @@ export default function PaymentPlanPage() {
           </h1>
 
           <p className="fh-payment-hero-text">
-            Explore plot prices, available sizes, flexible payment options
+            Explore <a href="https://faisalhillislamabad.com.pk/plots">plot prices</a>, available sizes, flexible payment options
             and the complete booking process for Faisal Hills.
           </p>
 
@@ -199,7 +199,7 @@ export default function PaymentPlanPage() {
           <div className="fh-payment-copy">
             <p>
               Faisal Hills project is one of the housing projects in the
-              Rawalpindi and Islamabad areas, offering various possession
+              <a href="https://rda.gop.pk">Rawalpindi</a> and Islamabad areas, offering various possession
               able plots that can be purchased on installments or by making
               cash payments. Most of them are available on cash prices,
               while a limited inventory is available on installments.
@@ -242,9 +242,9 @@ export default function PaymentPlanPage() {
 
             <p>
               Several factors determine the price of a plot in Faisal Hills.
-              While the society is governed by a common development ideology,
+              While the society is governed by a common <a href="https://faisalhillislamabad.com.pk/about">development</a> ideology,
               each block has its own demand, development status, and
-              investment potential.
+              <a href="https://faisalhillislamabad.com.pk/blog">investment</a> potential.
             </p>
           </div>
         </div>
@@ -372,7 +372,7 @@ export default function PaymentPlanPage() {
             </div>
 
             <p>
-              From the initial booking amount to quarterly installments, the
+              From the initial <a href="https://faisalhillislamabad.com.pk/contact">booking</a> amount to quarterly installments, the
               payment structure is designed to clearly define each stage of
               the purchase.
             </p>
@@ -480,7 +480,7 @@ export default function PaymentPlanPage() {
           </h2>
 
           <p>
-            Explore the location, master plan and different blocks of Faisal
+            Explore the location, <a href="https://faisalhillislamabad.com.pk/master-plan">master plan</a> and different blocks of Faisal
             Hills before making your decision.
           </p>
 

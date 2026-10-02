@@ -45,3 +45,9 @@ body {
     transform: translateX(-50%);
   }
 }
+
+/* Test: paragraph links only */
+p a {
+  color: #e6b800 !important;
+  -webkit-text-fill-color: #e6b800 !important;
+}

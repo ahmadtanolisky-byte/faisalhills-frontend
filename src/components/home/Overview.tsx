@@ -17,7 +17,7 @@ export default function Overview({ siteOptions }: { siteOptions: SiteOptions }) 
 
       <div className="space-y-6 text-base leading-8 text-neutral-600 md:text-lg">
         <p>
-          Faisal Hills is a housing project on GT Road near Taxila, under
+          <a href="https://faisalhillislamabad.com.pk/about">Faisal Hills</a> is a housing project on <a href="https://en.wikipedia.org/wiki/Grand_Trunk_Road">GT Road </a>near Taxila, under
           Faisal Town Group. The land covers about 11,823 Kanal at the foot of
           the Margalla Hills, and the Rawalpindi Development Authority has
           approved the whole layout.

@@ -30,7 +30,7 @@ const reasons = [
   {
     number: "03",
     title: "Planned Development",
-    text: "Faisal Hills is being developed in different blocks. Each block is being developed according to the overall master plan of the society.",
+    text: "Faisal Hills is being developed in different blocks. Each block is being developed according to the overall  master plan of the society.",
   },
   {
     number: "04",
@@ -112,7 +112,7 @@ export default function AboutPage() {
 
           <div className="fh-intro-text">
             <p>
-              Faisal Hills Islamabad is a large housing project located on
+              <a href="https://faisalhillislamabad.com.pk/">Faisal Hills Islamabad</a> is a large housing project located on
               GT Road near Taxila, with the Margalla Hills nearby. The
               community is positioned between GT Road and the M-1 Motorway.
             </p>
@@ -177,7 +177,7 @@ export default function AboutPage() {
               He has also developed projects like Faisal Town Phase 1, Faisal
               Town Phase 2, and Faisal Margalla City. His focus is to obtain
               the required approvals first and then move forward with the
-              development and sale of plots.
+              development and sale of <a href="https://faisalhillislamabad.com.pk/plots">plots.</a> 
             </p>
 
             <p>
@@ -215,14 +215,14 @@ export default function AboutPage() {
           <div className="fh-overview-grid">
             <div className="fh-overview-copy">
               <p>
-                Faisal Hills Islamabad is located on GT Road near Taxila. The
+                Faisal Hills Islamabad is <a href="https://faisalhillislamabad.com.pk/location">located on GT Road near Taxila</a>. The
                 project is spread over around 11,823 Kanal, with the Margalla
                 Hills nearby.
               </p>
 
               <p>
                 The society comes under the Rawalpindi Development Authority
-                (RDA), and its residential and commercial areas have the
+                (<a href="https://rda.gop.pk">RDA</a>), and its residential and commercial areas have the
                 required approval.
               </p>
 
@@ -322,7 +322,7 @@ export default function AboutPage() {
 
             <p>
               These areas have roads, utilities, and basic facilities.
-              Development in the other blocks is also continuing.
+              <a href="https://faisalhillislamabad.com.pk/gallery">Development</a> in the other blocks is also continuing.
             </p>
 
             <p>
@@ -510,13 +510,13 @@ export default function AboutPage() {
 
             <p>
               It can also be an option for overseas Pakistanis who want to
-              invest in a housing society near Islamabad and Taxila.
+              invest in a housing society near Islamabad and <a href="https://en.wikipedia.org/wiki/Taxila">Taxila.</a>
             </p>
 
             <p>
               With its location near GT Road, M-1 Motorway, B-17, and
               Margalla Hills, Faisal Hills has access to several important
-              areas around Islamabad and Rawalpindi.
+              areas around Islamabad and <a href="https://en.wikipedia.org/wiki/Rawalpindi_District">Rawalpindi.</a> 
             </p>
           </div>
         </div>
@@ -534,7 +534,7 @@ export default function AboutPage() {
           </h2>
 
           <p>
-            Explore the blocks, location, and development of Faisal Hills
+           <a href="https://faisalhillislamabad.com.pk/master-plan">Explore the blocks</a> , location, and development of Faisal Hills
             Islamabad.
           </p>
 

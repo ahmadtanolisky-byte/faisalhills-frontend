@@ -72,9 +72,9 @@ export default function LocationPage() {
           </h1>
 
           <p className="fh-location-hero-text">
-            Strategically located along G.T. Road near Taxila, Faisal Hills
-            offers convenient access to Islamabad, Rawalpindi, M-1 Motorway,
-            Margalla Avenue and the Islamabad International Airport.
+            Strategically located along <a href="https://faisalhillislamabad.com.pk/plots">G.T. Road near Taxila,</a> Faisal Hills
+            offers convenient access to Islamabad, Rawalpindi,<a href="https://en.wikipedia.org/wiki/M-1_motorway_(Pakistan)">M-1 Motorway</a> ,
+            Margalla Avenue and the <a href="https://en.wikipedia.org/wiki/Islamabad_International_Airport">Islamabad International Airport.</a>
           </p>
 
           <div className="fh-location-buttons">
@@ -111,14 +111,14 @@ export default function LocationPage() {
 
           <div className="fh-location-copy">
             <p>
-              Faisal Hills is very conveniently located along the major
+              <a href="https://faisalhillislamabad.com.pk/">Faisal Hills</a> is very conveniently located along the major
               highway, G.T. Road, which runs through Taxila. It is also close
               to the Peshawar-Islamabad Motorway M-1 and to Margalla Avenue.
             </p>
 
             <p>
               The importance of Faisal Hills' location is further enhanced by
-              the construction of the Margalla Avenue Extension, which will
+              the <a href="https://faisalhillislamabad.com.pk/gallery">construction</a> of the Margalla Avenue Extension, which will
               connect to the M-1 Motorway.
             </p>
 
@@ -131,7 +131,7 @@ export default function LocationPage() {
             <div className="fh-location-divider" />
 
             <p className="fh-location-highlight">
-              G.T. Road · M-1 Motorway · Margalla Avenue · Islamabad Airport
+             <a href="https://en.wikipedia.org/wiki/Grand_Trunk_Road">G.T. Road</a>  · M-1 Motorway · Margalla Avenue · Islamabad Airport
             </p>
           </div>
         </div>
@@ -154,7 +154,7 @@ export default function LocationPage() {
             </div>
 
             <p>
-              Faisal Hills has been designed on the important G.T. Road near
+              <a href="https://faisalhillislamabad.com.pk/master-plan">Faisal Hills has been designed </a>on the important G.T. Road near
               Taxila, with major highways, motorways and Islamabad's key
               access routes nearby.
             </p>
@@ -376,7 +376,7 @@ export default function LocationPage() {
           </h2>
 
           <p>
-            Explore Faisal Hills, its blocks, development and surrounding
+            Explore Faisal Hills, its blocks,<a href="https://faisalhillislamabad.com.pk/about">development</a>  and surrounding
             location.
           </p>
 
