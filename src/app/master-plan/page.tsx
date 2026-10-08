@@ -52,11 +52,13 @@ const landmarks: { number: string; title: string; text: string; image?: string }
   {
     number: "01",
     title: "Arc Monument",
+    image: "/images/Arch (1).png",
     text: "The Arc Monument is one of the most significant landmarks of Faisal Hills, constructed to give the area a unique identity. With its eye-catching structure and strategic placement, this monument is a recognizable feature of the society.",
   },
   {
     number: "02",
     title: "Hill Walk",
+    image: "/images/Hill Walk at Sunset.png",
     text: "The Hill Walk offers residents a refreshing outdoor activity, surrounded by the natural beauty of the surroundings. It is a place where people can take leisurely walks, relax, and enjoy their time amidst scenic surroundings.",
   },
   {
@@ -68,6 +70,7 @@ const landmarks: { number: string; title: string; text: string; image?: string }
   {
     number: "04",
     title: "Miyawaki Forest",
+    image: "/images/Miyawaki Forest at Twilight.png",
     text: "The Miyawaki Forest reflects Faisal Hills' concern for the environment and its development. Built as a dense plantation, this forest brings natural beauty and supports the development of a greener environment.",
   },
   {
@@ -79,11 +82,13 @@ const landmarks: { number: string; title: string; text: string; image?: string }
   {
     number: "06",
     title: "Sports Complex",
+    image: "/images/sports complex.png",
     text: "The Sports Complex is another landmark created to promote an active lifestyle among the residents of Faisal Hills. This recreational landmark provides residents with facilities for sports and physical exercise.",
   },
   {
     number: "07",
     title: "Hazrat Ali (R.A) Masjid",
+    image: "/images/Masjid.png",
     text: "Hazrat Ali (R.A) Masjid is an essential religious landmark in Faisal Hills, serving as a place of worship for residents. Its presence adds spiritual and community value to the development.",
   },
 ];
@@ -151,7 +156,7 @@ export default function MasterPlanPage() {
               href="#overview"
               className="fh-master-btn fh-master-btn-primary"
             >
-              Explore Master Plan <span>↓</span>
+              Explore <a href="https://faisalhillislamabad.com.pk/contact">Master Plan</a> <span>↓</span>
             </a>
 
             <a
@@ -187,16 +192,16 @@ export default function MasterPlanPage() {
 
           <div className="fh-master-copy">
             <p>
-              Faisal Hills is a housing society <a href="https://faisalhillislamabad.com.pk/location">located in the
-              Rawalpindi-Islamabad area</a>, known for its planning and <a href="https://faisalhillislamabad.com.pk/about">modern
-              development.</a> The housing society was developed with the help of
+              Faisal Hills is a housing society located in the
+             Rawalpindi-Islamabad area , known for its planning and modern
+              development. The housing society was developed with the help of
               planners, designers, and architects.
             </p>
 
             <p>
               The society covers an area of approximately 11,823.5 Kanals and
-              has been divided into different blocks. Its location between
-              the M-1 Motorway and GT Road provides convenient access to major
+              has been divided into different blocks. <a href="https://faisalhillislamabad.com.pk/location">Its location between
+              the M-1 Motorway and GT Road provides convenient acces</a>s to major
               destinations in the Twin Cities.
             </p>
 
@@ -247,7 +252,7 @@ export default function MasterPlanPage() {
             </div>
 
             <p>
-              The master plan divides Faisal Hills into distinct blocks,
+              <a href="https://faisalhillislamabad.com.pk/master-plan">The master plan divides Faisal Hills into distinct blocks,</a>
               creating organized residential and commercial areas supported
               by roads, parks, mosques and other facilities.
             </p>
@@ -567,22 +572,28 @@ export default function MasterPlanPage() {
       <style>{`
         
 .fh-master-page {
-  --fh-navy: #0E1B2A;
-  --fh-navy-light: #14263D;
-  --fh-burgundy: #872228;
-  --fh-orange: #F4A236;
-  --fh-beige: #F5E9DB;
-  --fh-cream: #FBF7F1;
-  --fh-white: #ffffff;
-  --fh-black: #111820;
-  --fh-muted: #625F5A;
-  --fh-border: #DED4C7;
+  --fh-navy: #0b1220;
+  --fh-navy-light: #121c2d;
 
-  background: var(--fh-beige);
-  color: var(--fh-black);
+  --fh-burgundy: #7a1930;
+  --fh-burgundy-dark: #621326;
+
+  --fh-cream: #f7f4ee;
+  --fh-cream-dark: #eee9e0;
+
+  --fh-white: #ffffff;
+
+  --fh-text: #1a1a1a;
+  --fh-muted: #68645f;
+  --fh-muted-light: #aaa7a1;
+
+  --fh-border: #ddd9d2;
+  --fh-dark-border: #2b3444;
+
+  background: var(--fh-cream);
+  color: var(--fh-text);
   overflow: hidden;
 }
-
 .fh-master-page *,
 .fh-master-page *::before,
 .fh-master-page *::after {
@@ -1584,7 +1595,379 @@ export default function MasterPlanPage() {
     padding: 85px 0;
   }
 }
+/* =========================================================
+   MASTER PLAN — ABOUT PAGE COLOR SYSTEM
+   Design/layout remains unchanged
+   ========================================================= */
 
+/* ---------- HERO ---------- */
+
+.fh-master-hero {
+  background:
+    radial-gradient(
+      circle at 78% 25%,
+      rgba(122, 25, 48, 0.35),
+      transparent 30%
+    ),
+    linear-gradient(
+      120deg,
+      #080d17 0%,
+      #0b1220 48%,
+      #1c2739 100%
+    );
+}
+
+.fh-master-hero::before {
+  background-image:
+    linear-gradient(
+      135deg,
+      transparent 48%,
+      rgba(255, 255, 255, 0.06) 49%,
+      transparent 50%
+    ),
+    linear-gradient(
+      45deg,
+      transparent 48%,
+      rgba(255, 255, 255, 0.04) 49%,
+      transparent 50%
+    );
+}
+
+.fh-master-hero-overlay {
+  background:
+    radial-gradient(
+      circle at 82% 28%,
+      rgba(122, 25, 48, 0.35),
+      transparent 32%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(5, 9, 16, 0.96),
+      rgba(8, 14, 24, 0.55),
+      rgba(8, 14, 24, 0.25)
+    );
+}
+
+.fh-master-hero h1 span {
+  color: #d9aeb8;
+}
+
+.fh-master-hero-text {
+  color: #d5d9df;
+}
+
+
+/* ---------- ALL EYEBROWS ---------- */
+
+.fh-master-eyebrow {
+  color: #cfc7bd;
+}
+
+.fh-master-dark-eyebrow {
+  color: var(--fh-burgundy);
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+.fh-master-btn-primary {
+  background: var(--fh-burgundy);
+  color: var(--fh-white);
+}
+
+.fh-master-btn-primary:hover {
+  background: var(--fh-burgundy-dark);
+  color: var(--fh-white);
+}
+
+.fh-master-btn-outline {
+  color: var(--fh-white);
+  border-color: rgba(255, 255, 255, 0.42);
+}
+
+.fh-master-btn-outline:hover {
+  border-color: var(--fh-white);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+
+/* ---------- LIGHT SECTIONS ---------- */
+
+.fh-master-overview {
+  background: var(--fh-cream);
+}
+
+.fh-master-visual-section {
+  background: var(--fh-white);
+}
+
+.fh-master-landmarks {
+  background: var(--fh-cream);
+}
+
+.fh-master-approach {
+  background: var(--fh-white);
+}
+
+
+/* ---------- HEADINGS ---------- */
+
+.fh-master-page h1 span,
+.fh-master-page h2 em {
+  color: var(--fh-burgundy);
+}
+
+.fh-master-copy,
+.fh-master-section-heading > p {
+  color: var(--fh-muted);
+}
+
+
+/* ---------- OVERVIEW FACTS ---------- */
+
+.fh-master-overview-facts div {
+  border-top-color: var(--fh-border);
+}
+
+.fh-master-overview-facts strong {
+  color: var(--fh-burgundy);
+}
+
+.fh-master-overview-facts span {
+  color: #77736e;
+}
+
+.fh-master-divider {
+  background: var(--fh-burgundy);
+}
+
+
+/* ---------- MASTER PLAN VISUAL ---------- */
+
+.fh-master-plan-visual {
+  background:
+    linear-gradient(
+      35deg,
+      transparent 48%,
+      rgba(122, 25, 48, 0.09) 49%,
+      transparent 50%
+    ),
+    #f3f0eb;
+
+  border-color: var(--fh-border);
+}
+
+.fh-master-plan-visual::before {
+  background-image:
+    linear-gradient(
+      rgba(11, 18, 32, 0.04) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(11, 18, 32, 0.04) 1px,
+      transparent 1px
+    );
+}
+
+.fh-master-schematic-label {
+  color: var(--fh-burgundy);
+}
+
+
+/* ---------- MASTER PLAN ROADS ---------- */
+
+.fh-master-road {
+  background: var(--fh-burgundy);
+}
+
+.fh-master-road span {
+  color: var(--fh-burgundy);
+}
+
+
+/* ---------- MASTER PLAN ZONES ---------- */
+
+.fh-master-zone {
+  border-color: rgba(122, 25, 48, 0.32);
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--fh-navy);
+}
+
+.fh-master-zone:hover {
+  background: rgba(122, 25, 48, 0.08);
+  border-color: var(--fh-burgundy);
+}
+
+.fh-master-zone span {
+  color: var(--fh-burgundy);
+}
+
+
+/* ---------- MASTER PLAN CENTER ---------- */
+
+.fh-master-plan-center {
+  background: var(--fh-navy);
+  border-color: var(--fh-burgundy);
+}
+
+.fh-master-plan-center span {
+  color: #c8c3bc;
+}
+
+
+/* ---------- BLOCKS ---------- */
+
+.fh-master-blocks,
+.fh-master-facilities {
+  background: var(--fh-navy);
+  color: var(--fh-white);
+}
+
+.fh-master-heading-light > p {
+  color: #a7afbb;
+}
+
+.fh-master-heading-light h2 em {
+  color: #d9aeb8;
+}
+
+.fh-master-block-card {
+  background: var(--fh-navy-light);
+  border-color: var(--fh-dark-border);
+}
+
+.fh-master-block-card:hover {
+  border-color: var(--fh-burgundy);
+}
+
+.fh-master-card-top span:first-child {
+  color: #c28c9a;
+}
+
+.fh-master-card-top span:last-child {
+  color: #a7afbb;
+}
+
+.fh-master-block-body h3 {
+  color: var(--fh-white);
+}
+
+.fh-master-block-body p {
+  color: #a7afbb;
+}
+
+.fh-master-card-bottom {
+  border-top-color: #2b3444;
+  color: #8e8982;
+}
+
+.fh-master-card-bottom span:last-child {
+  color: #c28c9a;
+}
+
+
+/* ---------- LANDMARKS ---------- */
+
+.fh-master-landmark-card {
+  background: var(--fh-white);
+  border-color: var(--fh-border);
+}
+
+.fh-master-landmark-card:hover {
+  border-color: var(--fh-burgundy);
+}
+
+.fh-master-landmark-number {
+  color: #c28c9a;
+}
+
+.fh-master-landmark-icon {
+  border-color: #d8d2ca;
+  color: var(--fh-burgundy);
+}
+
+.fh-master-landmark-card h3 {
+  color: var(--fh-navy);
+}
+
+.fh-master-landmark-card p {
+  color: var(--fh-muted);
+}
+
+.fh-master-landmark-line {
+  background: var(--fh-burgundy);
+}
+
+.fh-master-landmark-image span {
+  color: #d9aeb8;
+  background: rgba(11, 18, 32, 0.82);
+}
+
+
+/* ---------- FACILITIES ---------- */
+
+.fh-master-facility-card {
+  background: var(--fh-navy-light);
+  border-color: var(--fh-dark-border);
+}
+
+.fh-master-facility-card:hover {
+  border-color: var(--fh-burgundy);
+}
+
+.fh-master-facility-number {
+  color: #c28c9a;
+}
+
+.fh-master-facility-card h3 {
+  color: var(--fh-white);
+}
+
+.fh-master-facility-card p {
+  color: #a7afbb;
+}
+
+.fh-master-facility-arrow {
+  color: #c28c9a;
+}
+
+
+/* ---------- APPROACH ---------- */
+
+.fh-master-approach h2 em {
+  color: var(--fh-burgundy);
+}
+
+
+/* ---------- CTA ---------- */
+
+.fh-master-cta {
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(122, 25, 48, 0.35),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #080d17,
+      #0b1220 55%,
+      #162235
+    );
+}
+
+.fh-master-cta .fh-master-eyebrow {
+  color: #cfc7bd;
+}
+
+.fh-master-cta h2 em {
+  color: #d9aeb8;
+}
+
+.fh-master-cta > .fh-master-container > p:not(.fh-master-eyebrow) {
+  color: #b7bec9;
+}
 
       `}</style>
     </main>

@@ -198,8 +198,8 @@ export default function PaymentPlanPage() {
 
           <div className="fh-payment-copy">
             <p>
-              Faisal Hills project is one of the housing projects in the
-              <a href="https://rda.gop.pk">Rawalpindi</a> and Islamabad areas, offering various possession
+             <a href="https://faisalhillislamabad.com.pk/">Faisal Hills project is one of the housing projects</a>  in the
+              Rawalpindi and Islamabad areas, offering various possession
               able plots that can be purchased on installments or by making
               cash payments. Most of them are available on cash prices,
               while a limited inventory is available on installments.
@@ -215,8 +215,8 @@ export default function PaymentPlanPage() {
             <div className="fh-payment-highlight">
               <strong>Flexible Options</strong>
               <span>
-                Cash payments and installment options are available for
-                selected plots.
+                <a href="https://faisalhillislamabad.com.pk/payment-plan">Cash payments and installment options are available for
+                selected plots.</a>
               </span>
             </div>
           </div>
@@ -372,7 +372,7 @@ export default function PaymentPlanPage() {
             </div>
 
             <p>
-              From the initial <a href="https://faisalhillislamabad.com.pk/contact">booking</a> amount to quarterly installments, the
+              <a href="https://faisalhillislamabad.com.pk/contact"> From the initial booking amount to quarterly installments,</a>  the
               payment structure is designed to clearly define each stage of
               the purchase.
             </p>
@@ -499,20 +499,29 @@ export default function PaymentPlanPage() {
 
       <style>{`
         
-.fh-payment-page {
-  --fh-navy: #0E1B2A;
-  --fh-navy-light: #14263D;
-  --fh-burgundy: #872228;
-  --fh-orange: #F4A236;
-  --fh-beige: #F5E9DB;
-  --fh-cream: #FBF7F1;
-  --fh-white: #ffffff;
-  --fh-black: #111820;
-  --fh-muted: #625F5A;
-  --fh-border: #DED4C7;
 
-  background: var(--fh-beige);
-  color: var(--fh-black);
+
+.fh-payment-page {
+  --fh-navy: #0b1220;
+  --fh-navy-light: #121c2d;
+
+  --fh-burgundy: #7a1930;
+  --fh-burgundy-dark: #621326;
+
+  --fh-cream: #f7f4ee;
+  --fh-cream-dark: #eee9e0;
+
+  --fh-white: #ffffff;
+  --fh-text: #1a1a1a;
+
+  --fh-muted: #68645f;
+  --fh-muted-light: #aaa7a1;
+
+  --fh-border: #ddd9d2;
+  --fh-dark-border: #2b3444;
+
+  background: var(--fh-cream);
+  color: var(--fh-text);
   overflow: hidden;
 }
 
@@ -553,12 +562,13 @@ export default function PaymentPlanPage() {
   font-weight: 400;
 }
 
+
 /* =========================
    EYEBROWS
 ========================= */
 
 .fh-payment-eyebrow {
-  color: var(--fh-orange);
+  color: #d9aeb8;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: .18em;
@@ -568,6 +578,7 @@ export default function PaymentPlanPage() {
 .fh-payment-dark-eyebrow {
   color: var(--fh-burgundy);
 }
+
 
 /* =========================
    HERO
@@ -583,14 +594,14 @@ export default function PaymentPlanPage() {
   background:
     radial-gradient(
       circle at 78% 25%,
-      rgba(244,162,54,.22),
+      rgba(122,25,48,.30),
       transparent 30%
     ),
     linear-gradient(
       120deg,
-      #08121E 0%,
-      #0E1B2A 48%,
-      #1B3148 100%
+      #080d17 0%,
+      #0b1220 48%,
+      #121c2d 100%
     );
 }
 
@@ -606,19 +617,19 @@ export default function PaymentPlanPage() {
   content: "";
   position: absolute;
   inset: 0;
-  opacity: .10;
+  opacity: .08;
 
   background-image:
     linear-gradient(
       135deg,
       transparent 48%,
-      rgba(244,162,54,.35) 49%,
+      rgba(217,174,184,.22) 49%,
       transparent 50%
     ),
     linear-gradient(
       45deg,
       transparent 48%,
-      rgba(255,255,255,.12) 49%,
+      rgba(255,255,255,.10) 49%,
       transparent 50%
     );
 
@@ -632,8 +643,8 @@ export default function PaymentPlanPage() {
   background:
     linear-gradient(
       90deg,
-      rgba(8,18,30,.96),
-      rgba(14,27,42,.55)
+      rgba(8,13,23,.97),
+      rgba(11,18,32,.62)
     );
 }
 
@@ -650,15 +661,20 @@ export default function PaymentPlanPage() {
 }
 
 .fh-payment-hero h1 span {
-  color: var(--fh-orange);
+  color: #d9aeb8;
 }
 
 .fh-payment-hero-text {
   max-width: 560px;
-  color: #E6E0D7;
+  color: #d5d9df;
   font-size: 15px;
   line-height: 1.9;
   margin-bottom: 34px;
+}
+
+.fh-payment-hero-text a {
+  color: #d9aeb8;
+  text-decoration: none;
 }
 
 .fh-payment-hero-actions,
@@ -668,6 +684,7 @@ export default function PaymentPlanPage() {
   gap: 12px;
 }
 
+
 /* =========================
    BUTTONS
 ========================= */
@@ -675,6 +692,7 @@ export default function PaymentPlanPage() {
 .fh-payment-btn {
   min-height: 54px;
   padding: 15px 23px;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -691,17 +709,23 @@ export default function PaymentPlanPage() {
 
 .fh-payment-btn-main {
   color: #ffffff;
-  background: var(--fh-orange);
+  background: var(--fh-burgundy);
 }
 
 .fh-payment-btn-main:hover {
   color: #ffffff;
-  background: var(--fh-burgundy);
+  background: var(--fh-burgundy-dark);
 }
 
 .fh-payment-btn-light {
   color: #ffffff;
-  border: 1px solid rgba(255,255,255,.4);
+  border: 1px solid rgba(255,255,255,.40);
+}
+
+.fh-payment-btn-light:hover {
+  color: #ffffff;
+  border-color: #d9aeb8;
+  background: rgba(122,25,48,.18);
 }
 
 .fh-payment-btn-outline {
@@ -709,9 +733,16 @@ export default function PaymentPlanPage() {
   border: 1px solid rgba(255,255,255,.45);
 }
 
+.fh-payment-btn-outline:hover {
+  color: #ffffff;
+  border-color: #d9aeb8;
+  background: rgba(122,25,48,.18);
+}
+
 .fh-payment-btn:hover {
   transform: translateY(-2px);
 }
+
 
 /* =========================
    HERO BOTTOM
@@ -729,10 +760,11 @@ export default function PaymentPlanPage() {
   display: flex;
   justify-content: space-between;
 
-  color: #B8B0A7;
+  color: #a7afbb;
   font-size: 8px;
   letter-spacing: .16em;
 }
+
 
 /* =========================
    COMMON SECTIONS
@@ -767,11 +799,17 @@ export default function PaymentPlanPage() {
   margin-bottom: 24px;
 }
 
+.fh-payment-copy a,
+.fh-payment-section-heading a {
+  color: var(--fh-burgundy);
+  text-decoration: none;
+}
+
 .fh-payment-highlight {
   margin-top: 32px;
   padding: 22px;
 
-  border-left: 3px solid var(--fh-orange);
+  border-left: 3px solid var(--fh-burgundy);
   background: #ffffff;
 }
 
@@ -783,10 +821,11 @@ export default function PaymentPlanPage() {
 }
 
 .fh-payment-highlight span {
-  color: #77716A;
+  color: var(--fh-muted);
   font-size: 12px;
   line-height: 1.7;
 }
+
 
 /* =========================
    PRICE INTRO
@@ -811,6 +850,7 @@ export default function PaymentPlanPage() {
   margin-bottom: 0;
 }
 
+
 /* =========================
    BLOCK PRICES
 ========================= */
@@ -833,16 +873,16 @@ export default function PaymentPlanPage() {
   display: flex;
   flex-direction: column;
 
-  background: var(--fh-beige);
+  background: var(--fh-cream-dark);
   border: 1px solid var(--fh-border);
 
   transition: .25s ease;
 }
 
 .fh-payment-block-card:hover {
-  border-color: var(--fh-orange);
+  border-color: var(--fh-burgundy);
   transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(14,27,42,.08);
+  box-shadow: 0 12px 35px rgba(11,18,32,.10);
 }
 
 .fh-payment-card-top,
@@ -858,12 +898,12 @@ export default function PaymentPlanPage() {
 }
 
 .fh-payment-card-top span:first-child {
-  color: var(--fh-orange);
+  color: var(--fh-burgundy);
   font-size: 12px;
 }
 
 .fh-payment-card-top span:last-child {
-  color: #77716A;
+  color: var(--fh-muted);
 }
 
 .fh-payment-block-content {
@@ -879,7 +919,7 @@ export default function PaymentPlanPage() {
 }
 
 .fh-payment-block-content > p {
-  color: #67615B;
+  color: var(--fh-muted);
   font-size: 12px;
   line-height: 1.85;
   margin-bottom: 25px;
@@ -888,7 +928,7 @@ export default function PaymentPlanPage() {
 .fh-payment-size-title {
   padding-top: 18px;
   margin-bottom: 14px;
-  border-top: 1px solid #D8CEC1;
+  border-top: 1px solid var(--fh-border);
 }
 
 .fh-payment-size-title span {
@@ -907,28 +947,29 @@ export default function PaymentPlanPage() {
 .fh-payment-sizes span {
   padding: 8px 11px;
   background: #ffffff;
-  color: #4D4842;
+  color: #4d4842;
   font-size: 10px;
 }
 
 .fh-payment-sizes b {
-  color: var(--fh-orange);
+  color: var(--fh-burgundy);
   margin-right: 5px;
 }
 
 .fh-payment-card-footer {
   padding-top: 17px;
-  border-top: 1px solid #D8CEC1;
+  border-top: 1px solid var(--fh-border);
 
-  color: #89827A;
+  color: #89827a;
   font-size: 8px;
   letter-spacing: .14em;
 }
 
 .fh-payment-card-footer span:last-child {
-  color: var(--fh-orange);
+  color: var(--fh-burgundy);
   font-size: 17px;
 }
+
 
 /* =========================
    PAYMENT PLAN
@@ -942,11 +983,11 @@ export default function PaymentPlanPage() {
 }
 
 .fh-payment-light-heading > p {
-  color: #B7B0A8;
+  color: #aeb5bf;
 }
 
 .fh-payment-light-heading h2 em {
-  color: var(--fh-orange);
+  color: #d9aeb8;
 }
 
 .fh-payment-plan-banner {
@@ -973,7 +1014,7 @@ export default function PaymentPlanPage() {
   display: block;
   margin-bottom: 8px;
 
-  color: #EAD9D4;
+  color: #e5cbd1;
   font-size: 8px;
   letter-spacing: .14em;
 }
@@ -999,12 +1040,12 @@ export default function PaymentPlanPage() {
   grid-template-columns: 50px 1fr;
   gap: 20px;
 
-  border: 1px solid #26394D;
+  border: 1px solid var(--fh-dark-border);
   background: var(--fh-navy-light);
 }
 
 .fh-payment-feature-number {
-  color: var(--fh-orange);
+  color: #d9aeb8;
   font-size: 11px;
 }
 
@@ -1016,18 +1057,19 @@ export default function PaymentPlanPage() {
 }
 
 .fh-payment-feature p {
-  color: #B4B0A9;
+  color: #b8bec7;
   font-size: 12px;
   line-height: 1.8;
   margin-bottom: 0;
 }
+
 
 /* =========================
    FLEXIBLE PAYMENTS
 ========================= */
 
 .fh-payment-flexible {
-  background: var(--fh-beige);
+  background: var(--fh-cream);
 }
 
 .fh-payment-flex-grid {
@@ -1045,18 +1087,18 @@ export default function PaymentPlanPage() {
   flex-direction: column;
 
   background: #ffffff;
-  border: 1px solid #DCD1C3;
+  border: 1px solid var(--fh-border);
 
   transition: .25s ease;
 }
 
 .fh-payment-flex-card:hover {
   transform: translateY(-3px);
-  border-color: var(--fh-orange);
+  border-color: var(--fh-burgundy);
 }
 
 .fh-payment-flex-card > span {
-  color: var(--fh-orange);
+  color: var(--fh-burgundy);
   font-size: 10px;
   margin-bottom: auto;
 }
@@ -1069,29 +1111,30 @@ export default function PaymentPlanPage() {
 }
 
 .fh-payment-flex-card p {
-  color: #68635D;
+  color: var(--fh-muted);
   font-size: 12px;
   line-height: 1.8;
   margin-bottom: 0;
 }
+
 
 /* =========================
    BOOKING
 ========================= */
 
 .fh-payment-booking {
-  background: var(--fh-cream);
+  background: #ffffff;
 }
 
 .fh-payment-booking-intro {
   max-width: 450px;
-  color: #68645F;
+  color: var(--fh-muted);
   font-size: 14px;
   line-height: 1.8;
 }
 
 .fh-payment-steps {
-  border-top: 1px solid #D8D0C6;
+  border-top: 1px solid var(--fh-border);
 }
 
 .fh-payment-step {
@@ -1102,16 +1145,16 @@ export default function PaymentPlanPage() {
   gap: 15px;
   align-items: center;
 
-  border-bottom: 1px solid #D8D0C6;
+  border-bottom: 1px solid var(--fh-border);
 }
 
 .fh-payment-step > span {
-  color: var(--fh-orange);
+  color: var(--fh-burgundy);
   font-size: 10px;
 }
 
 .fh-payment-step p {
-  color: #45413D;
+  color: #45413d;
   font-size: 13px;
   margin-bottom: 0;
 }
@@ -1121,6 +1164,7 @@ export default function PaymentPlanPage() {
   font-size: 16px;
   font-weight: 400;
 }
+
 
 /* =========================
    DOCUMENTS
@@ -1142,24 +1186,25 @@ export default function PaymentPlanPage() {
   gap: 15px;
   align-items: center;
 
-  border: 1px solid #26394D;
+  border: 1px solid var(--fh-dark-border);
   background: var(--fh-navy-light);
 }
 
 .fh-payment-document span {
-  color: var(--fh-orange);
+  color: #d9aeb8;
   font-size: 10px;
 }
 
 .fh-payment-document p {
-  color: #DDD9D3;
+  color: #ddd9d3;
   font-size: 12px;
   margin-bottom: 0;
 }
 
 .fh-payment-document b {
-  color: var(--fh-orange);
+  color: #d9aeb8;
 }
+
 
 /* =========================
    CTA
@@ -1170,10 +1215,16 @@ export default function PaymentPlanPage() {
   text-align: center;
 
   background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(122,25,48,.42),
+      transparent 45%
+    ),
     linear-gradient(
       135deg,
-      var(--fh-burgundy),
-      #6C1725
+      #080d17,
+      #0b1220 55%,
+      #121c2d
     );
 
   color: #ffffff;
@@ -1186,7 +1237,7 @@ export default function PaymentPlanPage() {
 }
 
 .fh-payment-cta .fh-payment-eyebrow {
-  color: var(--fh-orange);
+  color: #d9aeb8;
 }
 
 .fh-payment-cta h2 {
@@ -1195,16 +1246,22 @@ export default function PaymentPlanPage() {
 }
 
 .fh-payment-cta h2 em {
-  color: var(--fh-orange);
+  color: #d9aeb8;
 }
 
 .fh-payment-cta > .fh-payment-container > p:not(.fh-payment-eyebrow) {
   max-width: 510px;
-  color: #EAD9D4;
+  color: #b8bec7;
   font-size: 14px;
   line-height: 1.8;
   margin-bottom: 30px;
 }
+
+.fh-payment-cta > .fh-payment-container > p a {
+  color: #d9aeb8;
+  text-decoration: none;
+}
+
 
 /* =========================
    RESPONSIVE
@@ -1258,6 +1315,7 @@ export default function PaymentPlanPage() {
     padding: 80px 0;
   }
 }
+
 
 @media (max-width: 560px) {
 
@@ -1334,7 +1392,10 @@ export default function PaymentPlanPage() {
   .fh-payment-cta {
     padding: 85px 0;
   }
+
 }
+
+
 
 
       `}</style>

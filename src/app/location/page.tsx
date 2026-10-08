@@ -72,9 +72,9 @@ export default function LocationPage() {
           </h1>
 
           <p className="fh-location-hero-text">
-            Strategically located along <a href="https://faisalhillislamabad.com.pk/plots">G.T. Road near Taxila,</a> Faisal Hills
-            offers convenient access to Islamabad, Rawalpindi,<a href="https://en.wikipedia.org/wiki/M-1_motorway_(Pakistan)">M-1 Motorway</a> ,
-            Margalla Avenue and the <a href="https://en.wikipedia.org/wiki/Islamabad_International_Airport">Islamabad International Airport.</a>
+            Strategically located along <a href="https://faisalhillislamabad.com.pk/plots">Road near Taxila,</a>G.T.  Faisal Hills
+            offers convenient access to Islamabad, Rawalpindi,M-1 Motorway ,
+            Margalla Avenue and the Islamabad International Airport.
           </p>
 
           <div className="fh-location-buttons">
@@ -111,15 +111,15 @@ export default function LocationPage() {
 
           <div className="fh-location-copy">
             <p>
-              <a href="https://faisalhillislamabad.com.pk/">Faisal Hills</a> is very conveniently located along the major
-              highway, G.T. Road, which runs through Taxila. It is also close
+              <a href="https://faisalhillislamabad.com.pk/location">Faisal Hills is very conveniently located along the major
+              highway</a> , G.T. Road, which runs through Taxila. It is also close
               to the Peshawar-Islamabad Motorway M-1 and to Margalla Avenue.
             </p>
 
             <p>
               The importance of Faisal Hills' location is further enhanced by
-              the <a href="https://faisalhillislamabad.com.pk/gallery">construction</a> of the Margalla Avenue Extension, which will
-              connect to the M-1 Motorway.
+              the construction of the Margalla Avenue Extension,<a href="https://en.wikipedia.org/wiki/M-1_motorway_(Pakistan)">which will
+              connect to the M-1 Motorway.</a> 
             </p>
 
             <p>
@@ -131,7 +131,7 @@ export default function LocationPage() {
             <div className="fh-location-divider" />
 
             <p className="fh-location-highlight">
-             <a href="https://en.wikipedia.org/wiki/Grand_Trunk_Road">G.T. Road</a>  · M-1 Motorway · Margalla Avenue · Islamabad Airport
+             G.T. Road  · M-1 Motorway · Margalla Avenue · Islamabad Airport
             </p>
           </div>
         </div>

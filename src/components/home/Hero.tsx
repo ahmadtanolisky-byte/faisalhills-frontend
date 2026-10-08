@@ -4,7 +4,7 @@ import type { SiteOptions } from "@/lib/types";
 
 export default function Hero({ siteOptions }: { siteOptions: SiteOptions }) {
   return (
-    <section className="relative flex min-h-[640px] items-end overflow-hidden bg-navy">
+    <section className="relative flex min-h-[640px] items-center overflow-hidden bg-navy">
       <Image
         src={siteOptions.heroImage || "/images/hero-home.png"}
         alt={siteOptions.heroTitle || "Faisal Hills Islamabad"}
@@ -12,21 +12,31 @@ export default function Hero({ siteOptions }: { siteOptions: SiteOptions }) {
         priority
         className="object-cover opacity-70"
       />
+
       <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent" />
 
-      <div className="relative mx-auto grid w-full max-w-7xl gap-10 px-4 pb-16 pt-32 sm:px-6 lg:grid-cols-[1.4fr_1fr] lg:px-8">
-        <div className="self-end">
-          <h1 className="font-display text-4xl font-extrabold text-white sm:text-6xl">
-            {siteOptions.heroTitle || "Faisal Hills Islamabad"}
-          </h1>
-          {siteOptions.heroSubtitle ? (
-            <p className="mt-4 max-w-xl text-lg text-white/85">{siteOptions.heroSubtitle}</p>
-          ) : null}
+      <div className="relative mx-auto grid w-full max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1.4fr_1fr] lg:px-8">
+        
+        {/* Heading - vertically centered */}
+        <div className="flex items-center">
+          <div>
+            <h1 className="font-display text-4xl font-extrabold text-white sm:text-6xl">
+              {siteOptions.heroTitle || "Faisal Hills Islamabad"}
+            </h1>
+
+            {siteOptions.heroSubtitle ? (
+              <p className="mt-4 max-w-xl text-lg text-white/85">
+                {siteOptions.heroSubtitle}
+              </p>
+            ) : null}
+          </div>
         </div>
 
-        <div className="self-end">
+        {/* Booking Form */}
+        <div className="flex items-center">
           <BookingForm />
         </div>
+
       </div>
     </section>
   );

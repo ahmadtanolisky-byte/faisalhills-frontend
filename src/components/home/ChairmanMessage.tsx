@@ -2,6 +2,7 @@ import Image from "next/image";
 import Html from "@/components/ui/Html";
 import type { SiteOptions } from "@/lib/types";
 
+
 export default function ChairmanMessage({ siteOptions }: { siteOptions: SiteOptions }) {
   return (
     <section className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:px-8">
@@ -12,14 +13,14 @@ export default function ChairmanMessage({ siteOptions }: { siteOptions: SiteOpti
         <Html html={siteOptions.chairmanBio} className="prose prose-neutral mt-4 max-w-none text-ink/80" />
          <div className="mt-6 space-y-4 text-base leading-7 text-ink/80">
           <p>
-            Faisal Town Group built Faisal Hills, and the company sits under
+            <a href="https://faisalhillislamabad.com.pk/about">Faisal Town Group built Faisal Hills</a>, and the company sits under
             Chaudhry Abdul Majeed, chairman of Faisal Town Group. His earlier
             projects, Faisal Town Phase 1, Faisal Town Phase 2, and Faisal
             Margalla City, all followed the same order: approval first,
             construction second. Faisal Hills is being built the same way.
           </p>
         </div>
-        <a href="#overview" className="mt-4 inline-block text-sm font-semibold text-maroon underline underline-offset-4">
+        <a href="/about" className="mt-4 inline-block text-sm font-semibold text-maroon underline underline-offset-4">
 
           Discover More About Zedem International →
         </a>

@@ -10,11 +10,16 @@ export const metadata: Metadata = {
 };
 
 
+const blocks = [
+  "Block A",
+  "Block B",
+  "Block C",
+  "Block D",
+  "Executive Block",
+  
+];
 
 
-
-
-const blocks = ["Executive Block", "Block A", "Block B", "Block C", "Block D"];
 
 const reasons = [
   {
@@ -167,7 +172,7 @@ export default function AboutPage() {
             </p>
 
             <p>
-              Chaudhry Abdul Majeed is the Chairman of Faisal Town Group and
+              <a href="https://faisalhillislamabad.com.pk/about">Chaudhry Abdul Majeed is the Chairman of Faisal Town Group</a> and
               the main person behind Faisal Hills Islamabad. He has been
               working in the property business in Islamabad and Rawalpindi
               for over 10 years.
@@ -221,8 +226,8 @@ export default function AboutPage() {
               </p>
 
               <p>
-                The society comes under the Rawalpindi Development Authority
-                (<a href="https://rda.gop.pk">RDA</a>), and its residential and commercial areas have the
+                The society comes under the
+                (<a href="https://rda.gop.pk"> Rawalpindi Development Authority   RDA</a>), and its residential and commercial areas have the
                 required approval.
               </p>
 
@@ -326,7 +331,7 @@ export default function AboutPage() {
             </p>
 
             <p>
-              The main aim is to develop Faisal Hills as a place where
+              <a href="https://faisalhillislamabad.com.pk/gallery">The main aim is to develop Faisal Hills</a> as a place where
               families can live comfortably, rather than making it only a
               plot investment project.
             </p>
@@ -509,7 +514,7 @@ export default function AboutPage() {
             </p>
 
             <p>
-              It can also be an option for overseas Pakistanis who want to
+              <a href="https://simple.wikipedia.org/wiki/Overseas_Pakistanis">It can also be an option for overseas Pakistanis</a> who want to
               invest in a housing society near Islamabad and <a href="https://en.wikipedia.org/wiki/Taxila">Taxila.</a>
             </p>
 
@@ -811,6 +816,60 @@ export default function AboutPage() {
     font-size: 10px;
     letter-spacing: 0.15em;
   }
+    /* =========================================================
+   OUR DEVELOPMENT GROUP — NAVY SECTION
+   ========================================================= */
+
+.fh-developer-section {
+  padding-top:50px;
+  padding-bottom:50px;
+  background: #0b1220;
+  color: #ffffff;
+}
+
+.fh-developer-section .fh-eyebrow {
+  color: #d9aeb8;
+}
+
+.fh-developer-section .fh-section-heading h2 {
+  color: #ffffff;
+}
+
+.fh-developer-section .fh-section-heading h2 em {
+  color: #d9aeb8;
+}
+
+.fh-developer-section .fh-section-heading > p {
+  color: #aeb5bf;
+}
+
+.fh-developer-section .fh-developer-copy {
+  color: #b8bec7;
+}
+
+.fh-developer-section .fh-project-list {
+  border-top-color: #2b3444;
+}
+
+.fh-developer-section .fh-project-row {
+  border-bottom-color: #2b3444;
+}
+
+.fh-developer-section .fh-project-row span {
+  color: #c28c9a;
+}
+
+.fh-developer-section .fh-project-row strong {
+  color: #ffffff;
+}
+
+.fh-developer-section .fh-project-row span:last-child {
+  color: #c28c9a;
+}
+
+.fh-developer-section .fh-project-row:hover strong {
+  color: #d9aeb8;
+}
 
   /* =========================================================
      GENERAL LIGHT SECTIONS
@@ -819,7 +878,7 @@ export default function AboutPage() {
   .fh-intro-section,
   .fh-overview-section,
   .fh-living-section,
-  .fh-developer-section,
+  
   .fh-community-section {
     padding: 110px 0;
     background: var(--fh-cream);

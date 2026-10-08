@@ -18,7 +18,19 @@ const blockDescriptions: Record<string, string> = {
 
   "block-d":
     "This block is the farthest from the GT Road gate and runs along the motorway. Because it is farther away, plot prices are currently the lowest in the society. Roads and utilities are still being developed.",
+
+  "prime-block":
+    "Prime Block offers a strategic location within Faisal Hills with convenient access to major roads, commercial areas, and key facilities of the society.",
 };
+
+const blockOrder = [
+  "block-a",
+  "block-b",
+  "block-c",
+  "block-d",
+  "executive-block",
+  "prime-block",
+];
 
 export default function BlocksSectors({ blocks }: { blocks: Block[] }) {
   if (!blocks.length) return null;
@@ -38,41 +50,47 @@ export default function BlocksSectors({ blocks }: { blocks: Block[] }) {
         </p>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {blocks.map((block) => {
-            const description = blockDescriptions[block.slug];
+          {[...blocks]
+            .sort(
+              (a, b) =>
+                blockOrder.indexOf(a.slug) - blockOrder.indexOf(b.slug)
+            )
+            .map((block) => {
+              const description = blockDescriptions[block.slug];
 
-            return (
-              <Link
-                key={block.slug}
-                href={`/blocks/${block.slug}`}
-                className="group rounded-xl border border-white/10 bg-white/5 p-6 transition hover:border-gold hover:bg-white/10"
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <p className="font-display text-xl font-bold text-white">
-                      {block.title}
-                    </p>
+              return (
+                <Link
+                  key={block.slug}
+                  href={`/blocks/${block.slug}`}
+                  className="group rounded-xl border border-white/10 bg-white/5 p-6 transition hover:border-gold hover:bg-white/10"
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <p className="font-display text-xl font-bold text-white">
+                        {block.title}
+                      </p>
 
-                    <p className="mt-1 text-xs uppercase tracking-wide text-white/50">
-                      {block.status}
-                    </p>
+                      <p className="mt-1 text-xs uppercase tracking-wide text-white/50">
+                        {block.status}
+                      </p>
+                    </div>
+
+                    <span className="text-gold opacity-0 transition group-hover:opacity-100">
+                      →
+                    </span>
                   </div>
 
-                  <span className="text-gold opacity-0 transition group-hover:opacity-100">
-                    →
-                  </span>
-                </div>
-
-                {description ? (
-                  <p className="mt-5 text-sm leading-6 text-white/70">
-                    {description}
-                  </p>
-                ) : null}
-              </Link>
-            );
-          })}
+                  {description ? (
+                    <p className="mt-5 text-sm leading-6 text-white/70">
+                      {description}
+                    </p>
+                  ) : null}
+                </Link>
+              );
+            })}
         </div>
       </div>
     </section>
   );
 }
+
