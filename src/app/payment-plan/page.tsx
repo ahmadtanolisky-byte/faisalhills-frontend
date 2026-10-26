@@ -5,9 +5,15 @@ import PaymentPlan from "@/components/home/PaymentPlan";
 import BookingSteps from "@/components/home/BookingSteps";
 
 export const metadata: Metadata = {
-  title: "Prices & Payment Plan | Faisal Hills Islamabad",
-  description:
-    "Explore Faisal Hills plot prices, available plot sizes, payment plan, booking process and required documents.",
+  title: "Faisal Hill Islamabad Payment Plan  | All Plot Sizes Details ",
+   description:
+    "Faisal Hill Islamabad payment plan , flexible instalment options for all plot sizes. GT Road Taxila, RDA-approved society. Check schedule & book today ",
+
+  
+  keywords: [
+    "faisal hill islamabad payment plan",
+    
+  ],
 };
 
 const blockPrices = [

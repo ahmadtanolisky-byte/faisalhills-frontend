@@ -22,9 +22,13 @@ const displayFont = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Faisal Hills Islamabad | Official Master Plan, Plots & Prices",
+  title: "Faisal Hill Islamabad | Plots, Prices, NOC & Location Guide",
   description:
-    "Faisal Hills Islamabad by Zedem International — official pricing, payment plan, master plan and plot booking guide.",
+    "Faisal Hill Islamabad – RDA-approved housing society. Explore plot sizes, prices, payment plan, NOC & location map. ",
+     keywords: [
+    "faisal hill islamabad",
+    
+  ],
 };
 
 export default async function RootLayout({ children }: LayoutProps<"/">) {

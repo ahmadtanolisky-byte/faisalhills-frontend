@@ -4,9 +4,13 @@
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Master Plan | Faisal Hills Islamabad",
+  title: "Faisal Hill Islamabad Master Plan | Blocks & Zones ",
   description:
-    "Explore the Faisal Hills Islamabad master plan, blocks, landmarks, facilities and amenities.",
+    "Faisal Hill Islamabad master plan 2026. A complete layout of all blocks, residential & commercial zones on GT Road Taxila. RDA-approved society.",
+    keywords: [
+    "faisal hill islamabad master plan",
+    
+  ],
 };
 
 const blocks = [
@@ -156,7 +160,7 @@ export default function MasterPlanPage() {
               href="#overview"
               className="fh-master-btn fh-master-btn-primary"
             >
-              Explore <a href="https://faisalhillislamabad.com.pk/contact">Master Plan</a> <span>↓</span>
+               Explore Master Plan <span>↓</span>
             </a>
 
             <a
