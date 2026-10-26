@@ -162,7 +162,7 @@ export default function PaymentPlanPage() {
           </h1>
 
           <p className="fh-payment-hero-text">
-            Explore <a href="https://faisalhillislamabad.com.pk/plots">plot prices</a>, available sizes, flexible payment options
+            Explore plot prices, available sizes, flexible payment options
             and the complete booking process for Faisal Hills.
           </p>
 

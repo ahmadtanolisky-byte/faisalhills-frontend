@@ -152,7 +152,7 @@ export default function MasterPlanPage() {
 
           <p className="fh-master-hero-text">
             Explore the planning, blocks, landmarks, facilities and amenities
-            that shape <a href="https://faisalhillislamabad.com.pk/">Faisal Hills</a> into a modern residential community.
+            that shape Faisal Hills into a modern residential community.
           </p>
 
           <div className="fh-master-actions">

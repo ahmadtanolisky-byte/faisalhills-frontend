@@ -75,7 +75,7 @@ export default function LocationPage() {
           </h1>
 
           <p className="fh-location-hero-text">
-            Strategically located along <a href="https://faisalhillislamabad.com.pk/plots">Road near Taxila,</a>G.T.  Faisal Hills
+            Strategically located along Road near Taxila, G.T.  Faisal Hills
             offers convenient access to Islamabad, Rawalpindi,M-1 Motorway ,
             Margalla Avenue and the Islamabad International Airport.
           </p>
