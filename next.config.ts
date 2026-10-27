@@ -5,6 +5,16 @@ const nextConfig: NextConfig = {
   // Node.js app hosting (and most self-hosted Node platforms) expects.
   // See DEPLOY.md.
   output: "standalone",
+  // Blog posts live at the site root (/<slug>); keep old /blog/<slug> links working.
+  async redirects() {
+    return [
+      {
+        source: "/blog/:slug",
+        destination: "/:slug",
+        permanent: true,
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {

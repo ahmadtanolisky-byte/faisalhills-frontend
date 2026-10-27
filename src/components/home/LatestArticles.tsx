@@ -18,7 +18,7 @@ export default function LatestArticles({ posts }: { posts: BlogPost[] }) {
           {posts.map((post) => (
             <Link
               key={post.slug}
-              href={`/blog/${post.slug}`}
+              href={`/${post.slug}`}
               className="overflow-hidden rounded-xl border border-black/10 transition hover:shadow-md"
             >
               <div className="relative aspect-video bg-cream">
