@@ -1,6 +1,6 @@
 export default function WhatsAppButton({ whatsappNumber }: { whatsappNumber?: string }) {
   const number = whatsappNumber?.replace(/[^0-9]/g, "");
-  const href = number ? `https://wa.me/${number}` : "https://wa.me/";
+  const href = "https://wa.me/923335650505";
 
   return (
     <a
