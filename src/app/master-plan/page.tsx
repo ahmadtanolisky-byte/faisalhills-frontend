@@ -4,11 +4,11 @@
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Faisal Hill Islamabad Master Plan | Blocks & Zones ",
+  title: "Faisal Hills Islamabad Master Plan | Blocks & Zones ",
   description:
-    "Faisal Hill Islamabad master plan 2026. A complete layout of all blocks, residential & commercial zones on GT Road Taxila. RDA-approved society.",
+    "Faisal Hills Islamabad master plan 2026. A complete layout of all blocks, residential & commercial zones on GT Road Taxila. RDA-approved society.",
     keywords: [
-    "faisal hill islamabad master plan",
+    "faisal hills islamabad master plan",
     
   ],
 };

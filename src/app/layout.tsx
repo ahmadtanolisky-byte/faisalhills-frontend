@@ -22,11 +22,11 @@ const displayFont = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Faisal Hill Islamabad | Plots, Prices, NOC & Location Guide",
+  title: "Faisal Hills Islamabad | Plots, Prices, NOC & Location Guide",
   description:
-    "Faisal Hill Islamabad – RDA-approved housing society. Explore plot sizes, prices, payment plan, NOC & location map. ",
+    "Faisal Hills Islamabad – RDA-approved housing society. Explore plot sizes, prices, payment plan, NOC & location map. ",
      keywords: [
-    "faisal hill islamabad",
+    "faisal hills islamabad",
     
   ],
 };

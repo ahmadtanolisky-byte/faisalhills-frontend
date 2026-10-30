@@ -8,8 +8,8 @@ import Link from "next/link";
 
 
 export const metadata: Metadata = {
-  title: "Faisal Hill Islamabad Location | GT Road Taxila Map.",
-  description: "Faisal Hill Islamabad location – ideally situated on GT Road Taxila with easy access to M-1 Motorway & Islamabad. View map and nearby landmarks",
+  title: "Faisal Hills Islamabad Location | GT Road Taxila Map.",
+  description: "Faisal Hills Islamabad location – ideally situated on GT Road Taxila with easy access to M-1 Motorway & Islamabad. View map and nearby landmarks",
   keywords: [
     "faisal hill islamabad location",
     

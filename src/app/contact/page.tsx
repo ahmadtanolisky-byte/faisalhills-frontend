@@ -5,13 +5,13 @@ import PageHero from "@/components/ui/PageHero";
 import BookingForm from "@/components/home/BookingForm";
 
 export const metadata: Metadata = {
-    title: "Contact Faisal Hill Islamabad | Book Your Plot Today  ",
+    title: "Contact Faisal Hills Islamabad | Book Your Plot Today  ",
    description:
-    "Contact Faisal Hill Islamabad  reach our sales team for plot booking, payment plan & investment queries 2026. Call or visit our office today",
+    "Contact Faisal Hills Islamabad  reach our sales team for plot booking, payment plan & investment queries 2026. Call or visit our office today",
 
   
   keywords: [
-    "contact faisal hill islamabad",
+    "contact faisal hills islamabad",
     
   ],
 
