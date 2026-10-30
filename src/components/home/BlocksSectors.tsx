@@ -41,6 +41,14 @@ const blockOrder = [
   "block-b-extension",
 ];
 
+// The CMS still has this block as "Prime Block"; show it as B Extension.
+function normalizeBlock(block: Block): Block {
+  if (block.slug === "prime-block") {
+    return { ...block, slug: "block-b-extension", title: "Block B Extension" };
+  }
+  return block;
+}
+
 export default function BlocksSectors({ blocks }: { blocks: Block[] }) {
   if (!blocks.length) return null;
 
@@ -59,7 +67,8 @@ export default function BlocksSectors({ blocks }: { blocks: Block[] }) {
         </p>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {[...blocks]
+          {blocks
+            .map(normalizeBlock)
             .sort(
               (a, b) =>
                 blockOrder.indexOf(a.slug) - blockOrder.indexOf(b.slug)
